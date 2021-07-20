@@ -1,1 +1,7 @@
-<app-todo-card></app-todo-card>
+<!--<app-todo-card></app-todo-card>-->
+<div>
+  <h1>
+    {{message}}
+  </h1>
+</div>
+<app-card (newsCard)="message=$event"></app-card>
