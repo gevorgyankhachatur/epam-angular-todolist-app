@@ -1,0 +1,21 @@
+<div class="root">
+  <div>
+    <button class="button buttonadd" (click)="addNews()">Add News</button>
+    <button class="button buttondelete" (click)="removeNews()">Delete News</button>
+    <button class="button buttonreset" (click)="removeAllNews()">Reset All</button>
+  </div>
+  <hr>
+  <div class="listNews">
+    <ul>
+      <li *ngFor="let news of newsLine">
+        {{ news }}
+      </li>
+    </ul>
+  </div>
+  <hr>
+  <div class="listNews" *ngIf="border">
+    You can not add new news, because your limit is reached
+    <hr>
+    <img src="../../assets/error404.gif" alt="#" width="500" height="300" />
+  </div>
+</div>
